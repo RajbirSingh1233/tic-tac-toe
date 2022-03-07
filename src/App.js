@@ -26,6 +26,8 @@ function App() {
             alert(`Ta da ! ${winner} won the Game !`)
         }
     }, [gameState])
+    
+    const date = new Date().getFullYear();
 
     const checkWinner = () => {
         const lines = [
@@ -67,7 +69,7 @@ function App() {
                 <SquareComponent onClick={() => onUserClicked(8)} state={gameState[8]}/>
             </div>
             <button className="clear-button" onClick={clearGame}>Clear Game</button>
-            <p className="fc-aqua fw-600">The Indian Dev</p>
+            <p className="fc-aqua fw-600">copyright ©️ Rajbir Singh {date}</p>
         </div>
     );
 }
